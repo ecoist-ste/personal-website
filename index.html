@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Steven Liu</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous"
+    referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/carousel/">
+  <link href="style/carousel.css" rel="stylesheet">
+  <style>
+    span.left {
+      display: inline-block;
+      width: 500px;
+      height: 400px;
+      padding: 30px 30px 30px 30px;
+      border-radius: 20px border: 1px solid blue;
+      background-color: rgb(255, 230, 230);
+      box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+      color: grey;
+    }
+
+    span.right {
+      display: inline-block;
+      width: 500px;
+      height: 400px;
+      padding: 30px 30px 30px 30px;
+      margin-left: 100px;
+      border-radius: 20px border: 1px solid blue;
+      background-color: rgb(255, 230, 230);
+      box-shadow: rgba(240, 46, 170, 0.4) -5px 5px, rgba(240, 46, 170, 0.3) -10px 10px, rgba(240, 46, 170, 0.2) -15px 15px, rgba(240, 46, 170, 0.1) -20px 20px, rgba(240, 46, 170, 0.05) -25px 25px;
+      color: grey;
+    }
+
+    .contest-font-style {
+      font-style: Garamond;
+    }
+
+    .center {
+      margin: auto;
+      width: 60%;
+      border: 3px solid #73AD21;
+      padding: 10px;
+    }
+
+    .contest-section {
+      display: inline-block;
+    }
+
+    .contest-section-content {
+      background-color: #AFEEEE padding: 50px 10px 50px 10px;
+      margin: 50px 20px 50px 20px;
+    }
+
+    p.inset {
+      border-style: inset;
+    }
+
+    .bd-placeholder-img {
+      font-size: 1.125rem;
+      text-anchor: middle;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      user-select: none;
+    }
+
+    @media (min-width: 768px) {
+      .bd-placeholder-img-lg {
+        font-size: 3.5rem;
+
+      }
+    }
+
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      position: -webkit-sticky;
+      /* Safari */
+      position: sticky;
+      top: 0;
+    }
+
+    li {
+      float: left;
+
+    }
+
+    li a {
+      display: block;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+
+    }
+
+    .nav-button-style {
+      color: CornflowerBlue;
+      padding: 5px 5px 5px 5px;
+    }
+
+    .category-heading {
+      color: CornflowerBlue;
+    }
+
+    .contest {
+      display: inline-block;
+      border: 2px solid white;
+      border-radius: 5px;
+      height: 500px;
+      width: 40%;
+      background-color: #AFEEEE;
+      padding-left: 40px;
+      padding-right: 10px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    .contest h4,
+    p,
+    a {
+      /* color: #FFD700; */
+    }
+  </style>
+</head>
+
+<body class="is-preload">
+  <section class="showcase">
+    <div class="video-container">
+      <video src="bg_video.mp4" autoplay="autoplay" muted="muted" loop="loop"></video>
+    </div>
+    <div class="content">
+      <h1>Steven Liu</h1>
+      <h3>@Chongqing Yucai Secondary School</h3>
+      <button onClick="document.getElementById('start').scrollIntoView();" type="button" class="btn btn-outline-warning" style="position:relative; top:20px">Learn More</button>
+      <!-- <a href="#start" class="btn">Learn More</a> -->
+    </div>
+  </section>
+  <!-- Nav bar -->
+
+  <ul class="nav nav-pills nav-justified" style="background-color: Lavender; z-index:1">
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="#social">
+        <p class="inset nav-button-style">Social Activity</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="#academic">
+        <p class="inset nav-button-style">Academic Activity</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="#edu">
+        <p class="inset nav-button-style">Education Courses</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="#self">
+        <p class="inset nav-button-style">Self Studying</p>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" aria-current="page" href="#contest">
+        <p class="inset nav-button-style">Contest</p>
+      </a>
+    </li>
+  </ul>
+
+
+  <div class="container marketing">
+    <section class="self-description" id="start">
+      <h2>Website Overview</h2>
+      <p>You can click any category in the navigation bar appearing on the top of current screen if you want to go to any certain direct type of my activities. </p>
+    </section>
+    <!-- START THE FEATURETTES -->
+    <div>
+      <hr class="featurette-divider" id="social">
+      <h1 class="category-heading">Social Activity</h1>
+      <hr class="featurette-divider">
+
+      <!-- Social Activity 1 -->
+      <div class="row featurette">
+
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Smart Kitchen Waste Pickup</h2>
+          <p class="lead">A creative solution to the inefficient garbage pickup process that considers fuel consumption and urgency for a bin to get picked up.</p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('https://ecoist-ste.github.io/promotion-website/index.html')">Go to Independent Website</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/skwp.jpeg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- Social Activity 2 -->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Eco-experience Facility Model</h2>
+          <p class="lead">A 3d model prototype that allows people to get in touch with nature in a confined area</p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('pdf/yic.pdf')">3d Model Display</button>&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-outline-success" style="position:relative;left:10%"
+            target="_blank" onclick="window.open('pdf/yic_report.pdf')">Whole Report</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/yic.jpg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- Social Activity 3 -->
+      <div class="row featurette">
+
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Environmental Group Research</h2>
+          <p class="lead">Went to Yunnan, China to test the efficacy of Sphagnum Palustre Water Purifier</p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('yunnan-subpage/index.html')">Learn More</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/yn.jpg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- Social Activity 4 -->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Environmental Club</h2>
+          <p class="lead">Gave lectures on AP ES and demonstrated my projects pertaining to ES to club members, and published content about environmental protection on WeChat Official Account</p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('envi-club-subpage/index.html')">Learn More</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/club.png" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider" id="academic">
+      <h1 class="category-heading">Academic Activity</h1>
+      <hr class="featurette-divider">
+
+
+
+      <!-- Academic Activity 1 -->
+      <div class="row featurette">
+
+        <div class="col-md-7">
+          <h2 class="featurette-heading">COMAP's HiMCM</h2>
+          <p class="lead">Used Matlab and Genetic Algorithm (GA) to produce the optimal funding schedule for Florida Rare Plant Conservation Endowment (FRPCE), in which it addressed time and budget for each protection program for endangered plants
+          </p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('pdf/himcm_question.pdf')">Question Statement </button>&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-outline-success"
+            style="position:relative;left:10%" target="_blank" onclick="window.open('pdf/himcm_paper.pdf')">Read Paper</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/pic1.png" alt="can't be shown">
+        </div>
+      </div>
+
+      <hr class="featurette-divider">
+
+      <!-- Academic Activity 2 -->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2 ">
+          <h2 class="featurette-heading">S.T.Yau High School Science Award</h2>
+          <p class="lead">Analyzed physical principles behind the sounding phenomenon of a corrugated tube</p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('pdf/sty_paper.pdf')"> Read Paper </button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/sty.jpeg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- Academic Activity 3 -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Chongqing Eagle Project</h2>
+          <p class="lead">Crafted a prototype cart that follows a person's gestures, as a contribution to our larger idea--create smartly-following cart in supermarkets.</p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('eagle-subpage.html')">Learn More</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/eagle.jpeg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider" id="edu">
+      <h1 class="category-heading">Education Courses</h1>
+      <hr class="featurette-divider">
+
+
+      <!-- Education Course 1 -->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Renewable Energy</h2>
+          <p class="lead">Hosted by Prof. Nasr Ghoniem, introduced conversion principles, technologies, and integration of clean energy sources, design and operation of energy-collecting systems. Eventually produced a report on Tidal Technologies.
+          </p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('pdf/cis_work.pdf')">Read Paper</button>&nbsp;&nbsp;&nbsp;<button type="button" class="btn btn-outline-success" style="position:relative;left:10%"
+            target="_blank" onclick="window.open('pdf/cis_evaluation.pdf')">Professor's Evaluation</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/renewable.jpeg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- Education Course 2 -->
+      <div class="row featurette">
+        <div class="col-md-7">
+          <h2 class="featurette-heading">Financial Markets</h2>
+          <p class="lead">Learned basics of finance and risk management, and behavioral finance principles. </p>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/finance.jpeg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider" id="self">
+      <h1 class="category-heading">Self Studying</h1>
+      <hr class="featurette-divider">
+
+      <!-- Self Studying 1-->
+      <div class="row featurette">
+        <div class="col-md-7 order-md-2">
+          <h2 class="featurette-heading">Enhancing Technical Skills</h2>
+          <p class="lead">Keep learning C++, Java, Python, Matlab, html, css... </p>
+          <button type="button" class="btn btn-outline-success" target="_blank" onclick="window.open('https://evergreen-libra-b35.notion.site/Technical-Skills-42fa40ff23844039a6ad299214001eed')">Learn More</button>
+        </div>
+        <div class="col-md-5">
+          <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice"
+            focusable="false" src="img/cs.jpeg" alt="can't be shown">
+        </div>
+      </div>
+      <hr class="featurette-divider" id="contest">
+      <h1 class="category-heading">Contest</h1>
+      <hr class="featurette-divider">
+
+      <!-- Contest 1 & 2 -->
+
+      <div>
+        <span class="left">
+          <h3 style=" filter: brightness(1);">Finalist, COMAP's HiMCM </h3>
+          <p style="filter: brightness(1);">COMAP'S High School Mathematical Contest in Modeling (HiMCM) is an international contest designed to provide high school students with the opportunity to work as team members to engage in and improve their
+            modeling, problem solving, and writing skills. </p>
+          <button style="position:relative;top: 80px; left: auto" class="button-62" role="button" type="button" target="_blank" onclick="window.open('https://www.comap.com/highschool/contests/himcm/index.html')">Official Website</button> <button target="_blank" onclick="window.open('pdf/himcm_certificate.pdf')" style="position:relative;top:80px; margin-left: 20%" class="button-62" role="button">My Certificate</button>
+        </span>
+
+
+        <span class="right">
+          <h3 style=" filter: brightness(1);">Bronze Award, S.T. Yau High School Science Award</h3>
+          <p style="filter: brightness(1);">Shing-Tung Yau, the S. -T. Yau High School Science Award inspires scientific innovations and is designed for high school students all over the world. Advocating innovative thinking and collaborative
+            spirits, the Award gives students the opportunity to participate by submitting academic papers.</p>
+          <button target="_blank" onclick="window.open('https://yauaward-asia.hk/')" style="position:relative;top: 80px; left: auto" class="button-62" role="button">Official Website</button> <button target="_blank" onclick="window.open('pdf/sty_certificate.pdf')" style="position:relative;top:80px; margin-left: 20%" class="button-62" role="button">My Certificate</button>
+
+        </span>
+      </div>
+      <hr class="featurette-divider">
+
+
+      <!-- Contest 3 & 4 -->
+
+      <div>
+        <span class="left">
+          <h3 style=" filter: brightness(1);">6th Highest Overall Score, USAD China In-Country Competition</h3>
+          <p style="filter: brightness(1);">The Academic Decathlon is an annual high school academic competition organized by the non-profit United States Academic Decathlon. The competition consists of seven objective multiple choice tests, two
+            subjective performance events, and an essay.</p>
+          <button target="_blank" onclick="window.open('https://www.usad.org/')" style="position:relative;top: 80px; left: auto" class="button-62" role="button">Official Website</button> <button target="_blank" onclick="window.open('pdf/usad_certificate.pdf')" style="position:relative;top:80px; margin-left: 20%" class="button-62" role="button">My Certificate</button>
+
+        </span>
+
+        <span class="right">
+          <h3 style=" filter: brightness(1);">Excellent Award, Youth Impact Communication Initiative</h3>
+          <p style="filter: brightness(1);"> YIC asks participants to be sensitive to societal problems remaining in their households, communities, cities, or even countries. After determining one particular topic as the central goal of their
+            project, participants need to use statistics or other academic tools to give their own insights and finally form a paper. </p>
+          <button target="_blank" onclick="window.open('http://jea.org/wp/home/people/national-and-regional-associations/)"  style="position:relative;top: 80px; left: auto" class="button-62" role="button">Official Website</button> <button target="_blank" onclick="window.open('pdf/yic_certificate.pdf')" style="position:relative;top:80px; margin-left: 20%" class="button-62" role="button" >My Certificate</button>
+
+        </span>
+      </div>
+      <hr class="featurette-divider">
+
+      <!-- Contest 5 & 6 -->
+
+      <div>
+        <span class="left">
+          <h3 class="contest-font-style" style=" filter: brightness(1);">19th Place, Envirothon (Grade A in Case Study)</h3>
+          <p class="contest-font-style" style="filter: brightness(1);">NCF-Envirothon is an annual environmentally themed academic competition for high school aged students organized by the NCF-Envirothon a program of the National Conservation
+            Foundation. The competition is held by the United States and Canada on a regional, state, and bi-national level.</p>
+          <button target="_blank" onclick="window.open('https://envirothon.org/')" style="position:relative;top: 80px; left: auto" class="button-62" role="button">Official Website</button> <button target="_blank" onclick="window.open('pdf/envi_certificate.pdf')" style="position:relative;top:80px; margin-left: 20%" class="button-62" role="button">My Certificate</button>
+
+        </span>
+
+        <span class="right">
+          <h3 class="contest-font-style" style=" filter: brightness(1);">National Second Place, FBLA - Broadcast Journalism Category</h3>
+          <p class="contest-font-style" style="filter: brightness(1);">FBLA is the high school division of Future Business Leaders of America-Phi Beta Lambda, Inc. FBLA helps high school students prepare for careers in business through academic
+            competitions, leadership development, and educational programs.</p>
+          <button target="_blank" onclick="window.open('https://www.floridafbla-pbl.com/fbla-event-broadcast-journalism')" style="position:relative;top: 80px; left: auto" class="button-62" role="button">Official Website</button> <button target="_blank" onclick="window.open('pdf/fbla_certificate.pdf')" style="position:relative;top:80px; margin-left: 20%" class="button-62" role="button">My Certificate</button>
+
+        </span>
+      </div>
+
+      <hr class="featurette-divider">
+      <!-- Contest 7 -->
+
+      <div>
+        <span class="left">
+          <h3 style=" filter: brightness(1);">Third Prize, High School Entrepreneurship Competition</h3>
+          <p style="filter: brightness(1);">The competition requires participants to design an app addressing certain societal issues along with economic analysis in only one day.</p>
+          <button style="position:relative;top: 80px; left: auto" class="button-62" role="button">My Certificate</button>
+
+        </span>
+      </div>
+      <hr class="featurette-divider">
+
+    </div>
+
+
+    <!-- /END THE FEATURETTES -->
+  </div>
+  <!-- /.container -->
+  </section>
+  <section id="about">
+    <h1>About</h1 <p>
+    Feel free to contact me through any kind of media shown below. Please note that the response may take a few days. Thanks for your understanding.
+    </p>
+    <h2></h2>
+    <div class="social">
+      <a href="https://twitter.com/joebiden" target="_blank">
+        <i class="fab fa-twitter fa-3x"></i>
+      </a>
+      <a href="https://github.com/ecoist-ste" target="_blank">
+        <i class="fab fa-github fa-3x"></i>
+      </a>
+      <a href="mailto:steven.liu12@outlook.com" style="position:relative; bottom:15px">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
+          <path
+            d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+        </svg>
+      </a>
+
+    </div>
+  </section>
+  </div>
+</body>
+
+</html>
